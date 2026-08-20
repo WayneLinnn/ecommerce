@@ -1,19 +1,21 @@
-import { Button } from "@/components/ui/button"
+import { HeroCarousel } from "@/components/home/hero-carousel"
+import { CategoryGrid } from "@/components/home/category-grid"
+import { SeasonGrid } from "@/components/home/season-grid"
+import { PromoTiles } from "@/components/home/promo-tiles"
+import { EditorPicks } from "@/components/home/editor-picks"
+import { TrustBar } from "@/components/home/trust-bar"
+import { BrandStory } from "@/components/home/brand-story"
 
-export default function Page() {
+export default function HomePage() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
+    <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-4 py-8">
+      <HeroCarousel />
+      <CategoryGrid />
+      <SeasonGrid />
+      <PromoTiles />
+      <EditorPicks />
+      <TrustBar />
+      <BrandStory />
     </div>
   )
 }
