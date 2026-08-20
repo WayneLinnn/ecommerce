@@ -1,21 +1,37 @@
-# Next.js template
+# NORI
 
-This is a Next.js template with shadcn/ui.
+A practice storefront for everyday objects — lighting, kitchen, textiles, and stationery. You can browse, filter, open a product, add it to a cart, and walk a multi-step checkout. There is no backend. The cart lives in React context and is gone on refresh. Checkout never charges anyone.
 
-## Adding components
+The brand, prices, and copy are invented. Product photos are from Unsplash and Pexels.
 
-To add components to your app, run the following command:
+## Pages
+
+| Route | What it is |
+| --- | --- |
+| `/` | Seasonal carousel, category tiles, editor picks, short brand story |
+| `/products` | Catalog with search, category, and sort |
+| `/products/[id]` | Gallery, specs, and reviews |
+| `/checkout` | Multi-step checkout with a progress marker |
+| `/about` | Brand page |
+
+The header holds a cart sheet. Catalog data lives in `lib/products.ts` and `lib/catalog.ts`.
+
+## Stack
+
+- Next.js 16 (App Router) and React 19
+- Tailwind CSS v4, shadcn/ui
+- Client-side cart context (no persistence, no payments)
+
+## Run
 
 ```bash
-npx shadcn@latest add button
+npm install
+npm run dev
 ```
 
-This will place the ui components in the `components` directory.
+Dev server: [http://localhost:3000](http://localhost:3000)
 
-## Using components
-
-To use the components in your app, import them as follows:
-
-```tsx
-import { Button } from "@/components/ui/button";
+```bash
+npm run build
+npm run start
 ```
